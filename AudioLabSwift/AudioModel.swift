@@ -15,7 +15,7 @@ class AudioModel {
     // MARK: Properties
     private var BUFFER_SIZE:Int
     private var SAMPLE_RATE: Int
-    private var fftMagnitudeIndex: Int
+    //private var fftMagnitudeIndex: Int
     // thse properties are for interfaceing with the API
     // the user can access these arrays at any time and plot them if they like
     var timeData:[Float]
@@ -104,6 +104,7 @@ class AudioModel {
         self.inputBuffer?.addNewFloatData(data, withNumSamples: Int64(numFrames))
     }
     
+    /*
     func  convertFftMagnitudeIndexToFrequency(fftMagnitudeIndex: Int) -> Float  {
         return Float(fftMagnitudeIndex * (SAMPLE_RATE/2) / (BUFFER_SIZE/2));
     }
@@ -208,7 +209,7 @@ class AudioModel {
                 return fftMagnitudeIndices;
             }
         }
-        
+        */
     
     
 }

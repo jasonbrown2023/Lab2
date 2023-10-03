@@ -35,7 +35,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="6xo-5a-weN" kind="show" id="X5d-SG-8cO"/>
+                                    <segue destination="6xo-5a-weN" kind="show" id="ejh-9h-gOM"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellB" textLabel="Sd1-JR-Y9g" style="IBUITableViewCellStyleDefault" id="2D9-ta-1Rs">
@@ -215,13 +215,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="16500" minValue="15000" maxValue="20000" translatesAutoresizingMaskIntoConstraints="NO" id="dx4-5D-e2W">
-                                <rect key="frame" x="18" y="586" width="337" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="changeFreq:" destination="6xo-5a-weN" eventType="valueChanged" id="Vbg-7a-psj"/>
-                                </connections>
-                            </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="16500Hz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="317-p8-ioo">
                                 <rect key="frame" x="175" y="623" width="93" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -229,15 +222,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2wq-UA-8vs">
-                                <rect key="frame" x="180" y="652" width="56" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Play"/>
-                                <connections>
-                                    <action selector="playFreq:" destination="6xo-5a-weN" eventType="touchUpInside" id="g4L-sT-4au"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="g5X-Jl-HA7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -252,13 +236,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="cJ1-iG-Pul"/>
                     <connections>
-                        <outlet property="max2freqlabel" destination="Qb9-dW-Flh" id="QK5-Yv-4Mg"/>
-                        <outlet property="maxfreqLabel" destination="jQD-IS-1cQ" id="LtF-ey-DtH"/>
-                        <outlet property="optionalLabel" destination="ZVT-wn-jlX" id="2fn-z0-QKV"/>
-                        <outlet property="optionalLabel2" destination="GYH-hS-QVi" id="eaa-hP-uki"/>
-                        <outlet property="playButton" destination="2wq-UA-8vs" id="Ql9-SL-j9m"/>
-                        <outlet property="slider" destination="dx4-5D-e2W" id="UJv-9d-FNa"/>
-                        <outlet property="sliderLabel" destination="317-p8-ioo" id="YsZ-F3-efh"/>
                         <outlet property="userView" destination="AiM-4J-tPB" id="lTO-5W-84s"/>
                     </connections>
                 </viewController>

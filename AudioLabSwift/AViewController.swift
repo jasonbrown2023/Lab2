@@ -15,12 +15,14 @@ class AViewController: UIViewController {
 
     @IBOutlet weak var userView: UIView!
     
+    /*
     @IBOutlet weak var maxfreqLabel: UILabel!
     @IBOutlet weak var max2freqLabel: UILabel!
     var fftMagnitude1:Float = 0.0;
     var fftMagnitude2:Float = 0.0;
     var fftMagnitudeIndex1: Int = 0;
     var fftMagnitudeIndex2:Int = 0;
+    */
     
     var displayModName = "Mod A"
     
@@ -37,10 +39,11 @@ class AViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.fftMagnitude1 = -1000;
+        /*self.fftMagnitude1 = -1000;
         self.fftMagnitude2 = -1000;
         self.fftMagnitudeIndex1 = 0;
         self.fftMagnitudeIndex2 = 0;
+         */
         
         if let graph = self.graph{
             graph.setBackgroundColor(r: 0, g: 0, b: 0, a: 1)
@@ -67,10 +70,10 @@ class AViewController: UIViewController {
         Timer.scheduledTimer(withTimeInterval: 0.05, repeats: true) { _ in
             self.updateGraph()
         }
-        
+        /*
         Timer.scheduledTimer(withTimeInterval: 0.05, repeats: true) { _ in
             self.updateLabels()
-        }
+        }*/
        
     }
     
@@ -93,7 +96,7 @@ class AViewController: UIViewController {
     
     @IBOutlet weak var optionalLabel2: UILabel?
     @IBOutlet weak var optionalLabel:UILabel?
-    
+    /*
     func updateLabels(){
     
         self.maxfreqLabel.text = AudioModel.convertFftMagnitudeIndexToFrequency(fftMagnitudeIndex1: Int) as NSString;
@@ -107,28 +110,9 @@ class AViewController: UIViewController {
         self.fftMagnitudeIndex2 = 0;
         
     }
-    
+    */
     
     // Plays a settable via a slider inaudible tone to the speakers (15-20kHz)
-    @IBOutlet weak var slider: UISlider!
-    @IBOutlet weak var playButton: UIButton!
-    @IBOutlet weak var sliderLabel: UILabel!
-    var frequency: Int = 0
-    
-    @IBAction func changeFreq(_ sender: Any) {
-        frequency = Int(slider.value)
-        sliderLabel.text = String(frequency) + "Hz"
-    }
-
-    @IBAction func playFreq(_ sender: Any) {
-        let audioSession = AVAudioSession.sharedInstance()
-        let sampleRate = audioSession.sampleRate
-        let FPS = sampleRate / Double(frequency)
-        
-        audio.startMicrophoneProcessing(withFps: FPS)
-        audio.play()
-        self.updateGraph()
-    }
     
     
 }
